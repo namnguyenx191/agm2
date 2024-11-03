@@ -1,0 +1,36 @@
+
+package Nguyennam-29219034776;
+import java.util.Scanner;
+
+public class ptbac2 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);//nhap tu ban phim
+        
+        System.out.print("nhap he so a: ");//in
+        int a = scanner.nextInt();//gan a la so nguyen
+        System.out.print("nhap he so b: ");
+        int b = scanner.nextInt();
+        System.out.print("nhap he so c: ");
+        int c = scanner.nextInt();
+        
+        if (a == 0) {
+            System.out.println("day khong phai la phuong trinh bac 2.");
+        } else {
+            int delta = b * b - 4 * a * c;
+            
+            if (delta > 0) {
+                int x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                int x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                System.out.println("phuong trinh co hai nghiem phan biet: x1 = " + x1 + " va x2 = " + x2);
+            } else if (delta == 0) {
+                int x = -b / (2 * a);
+                System.out.println("phuonng trinh co nghiem kep: x = " + x);
+            } else {
+                System.out.println("phuong trinh vo nghiem.");
+            }
+        }
+        //su dung if else de giai pt bac 2
+        scanner.close();
+    }
+}
